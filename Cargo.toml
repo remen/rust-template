@@ -3,3 +3,6 @@
 name = "hello_world"
 version = "0.0.1"
 authors = [ "Petter Remen <petter.remen@gmail.com>" ]
+
+[dependencies]
+clap = "2"
