@@ -1,0 +1,8 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: ekidd/rust-musl-builder:1.18.0
+    steps:
+      - checkout
+      - run: cargo build
