@@ -1,13 +1,10 @@
-use std::io;
+#[macro_use]
+extern crate clap;
+
+use clap::App;
 
 fn main() {
-    println!("Hello, world!");
-
-    let mut guess = String::new();
-
-    io::stdin().read_line(&mut guess).expect(
-        "Failed to read line",
-    );
-
-    println!("You guessed: {}", guess);
+    App::new(crate_name!())
+        .version(crate_version!())
+        .get_matches();
 }
